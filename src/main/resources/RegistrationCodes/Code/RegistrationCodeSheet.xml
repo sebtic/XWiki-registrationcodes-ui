@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xwikidoc reference="RegistrationCodes.Code.RegistrationCodeSheet" locale="">
+  <web>RegistrationCodes.Code</web>
+  <name>RegistrationCodeSheet</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <parent>RegistrationCodes.Code.WebHome</parent>
+  <creator>xwiki:XWiki.Admin</creator>
+  <author>xwiki:XWiki.Admin</author>
+  <customClass/>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <creationDate>1472829679000</creationDate>
+  <date>1472885179000</date>
+  <contentUpdateDate>1472885179000</contentUpdateDate>
+  <version>1.1</version>
+  <title>$services.localization.render('registrationcodes.view.title')</title>
+  <defaultTemplate/>
+  <validationScript/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>true</hidden>
+  <object>
+    <class>
+      <name>XWiki.JavaScriptExtension</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <cache>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>cache</name>
+        <number>5</number>
+        <prettyName>Caching policy</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators>|, </separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>long|short|default|forbid</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </cache>
+      <code>
+        <disabled>0</disabled>
+        <editor>PureText</editor>
+        <name>code</name>
+        <number>2</number>
+        <prettyName>Code</prettyName>
+        <rows>20</rows>
+        <size>50</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </code>
+      <name>
+        <disabled>0</disabled>
+        <name>name</name>
+        <number>1</number>
+        <prettyName>Name</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </name>
+      <parse>
+        <disabled>0</disabled>
+        <displayFormType>select</displayFormType>
+        <displayType>yesno</displayType>
+        <name>parse</name>
+        <number>4</number>
+        <prettyName>Parse content</prettyName>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+      </parse>
+      <use>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>use</name>
+        <number>3</number>
+        <prettyName>Use this extension</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators>|, </separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>currentPage|onDemand|always</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </use>
+    </class>
+    <name>RegistrationCodes.Code.RegistrationCodeSheet</name>
+    <number>0</number>
+    <className>XWiki.JavaScriptExtension</className>
+    <guid>109c14d0-e621-4ab0-a22a-a79f7b97f912</guid>
+    <property>
+      <cache>long</cache>
+    </property>
+    <property>
+      <code>require(['jquery', "$services.webjars.url('jquery-ui', 'jquery-ui.js')"], function ($) {
+
+  // load jquery-ui.css
+  function loadCss(url) {
+    var link = document.createElement("link");
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    link.href = url;
+    document.getElementsByTagName("head")[0].appendChild(link);
+  }
+  
+  loadCss("$services.webjars.url('jquery-ui', 'jquery-ui.css')");
+  loadCss("$services.webjars.url('select2', 'dist/css/select2.min.css')");
+});
+</code>
+    </property>
+    <property>
+      <name/>
+    </property>
+    <property>
+      <parse>1</parse>
+    </property>
+    <property>
+      <use>currentPage</use>
+    </property>
+  </object>
+  <object>
+    <class>
+      <name>XWiki.JavaScriptExtension</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <cache>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>cache</name>
+        <number>5</number>
+        <prettyName>Caching policy</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators>|, </separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>long|short|default|forbid</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </cache>
+      <code>
+        <disabled>0</disabled>
+        <editor>PureText</editor>
+        <name>code</name>
+        <number>2</number>
+        <prettyName>Code</prettyName>
+        <rows>20</rows>
+        <size>50</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </code>
+      <name>
+        <disabled>0</disabled>
+        <name>name</name>
+        <number>1</number>
+        <prettyName>Name</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </name>
+      <parse>
+        <disabled>0</disabled>
+        <displayFormType>select</displayFormType>
+        <displayType>yesno</displayType>
+        <name>parse</name>
+        <number>4</number>
+        <prettyName>Parse content</prettyName>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+      </parse>
+      <use>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>use</name>
+        <number>3</number>
+        <prettyName>Use this extension</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators>|, </separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>currentPage|onDemand|always</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </use>
+    </class>
+    <name>RegistrationCodes.Code.RegistrationCodeSheet</name>
+    <number>1</number>
+    <className>XWiki.JavaScriptExtension</className>
+    <guid>86613dfd-dfd5-4b5b-b739-3390e1b31937</guid>
+    <property>
+      <cache>long</cache>
+    </property>
+    <property>
+      <code>require(['jquery', "$services.webjars.url('jquery-ui', 'jquery-ui.js')", "$services.webjars.url('select2', 'dist/js/select2.min.js')" ], function ($) {
+  $('div[fieldname] select').select2();
+});
+</code>
+    </property>
+    <property>
+      <name/>
+    </property>
+    <property>
+      <parse>1</parse>
+    </property>
+    <property>
+      <use>currentPage</use>
+    </property>
+  </object>
+  <object>
+    <class>
+      <name>XWiki.StyleSheetExtension</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <cache>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>cache</name>
+        <number>6</number>
+        <prettyName>Caching policy</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators>|, </separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>long|short|default|forbid</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </cache>
+      <code>
+        <disabled>0</disabled>
+        <editor>PureText</editor>
+        <name>code</name>
+        <number>3</number>
+        <prettyName>Code</prettyName>
+        <rows>20</rows>
+        <size>50</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </code>
+      <contentType>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>contentType</name>
+        <number>1</number>
+        <prettyName>Content Type</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators>|, </separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>CSS|LESS</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </contentType>
+      <name>
+        <disabled>0</disabled>
+        <name>name</name>
+        <number>2</number>
+        <prettyName>Name</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </name>
+      <parse>
+        <disabled>0</disabled>
+        <displayFormType>select</displayFormType>
+        <displayType>yesno</displayType>
+        <name>parse</name>
+        <number>5</number>
+        <prettyName>Parse content</prettyName>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+      </parse>
+      <use>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>use</name>
+        <number>4</number>
+        <prettyName>Use this extension</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators>|, </separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>currentPage|onDemand|always</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </use>
+    </class>
+    <name>RegistrationCodes.Code.RegistrationCodeSheet</name>
+    <number>0</number>
+    <className>XWiki.StyleSheetExtension</className>
+    <guid>c14a4941-f1b1-4b38-aa84-55fde9913de8</guid>
+    <property>
+      <cache>long</cache>
+    </property>
+    <property>
+      <code>div[fieldname] {
+  margin-bottom:10px;
+} </code>
+    </property>
+    <property>
+      <contentType>CSS</contentType>
+    </property>
+    <property>
+      <name/>
+    </property>
+    <property>
+      <parse>0</parse>
+    </property>
+    <property>
+      <use>currentPage</use>
+    </property>
+  </object>
+  <content>{{velocity}}
+{{html wiki=true}}
+#set($docextras=[])
+$xwiki.jsx.use("RegistrationCodes.Code.RegistrationCodeSheet")
+$xwiki.ssx.use("RegistrationCodes.Code.RegistrationCodeSheet")
+### setting right mode for the sheet 
+### setting $curdoc variable either already set or set to $doc
+#if(!$mode)
+  #if($xcontext.action=="inline" || $xcontext.action=="edit")
+    #set($mode = "edit")
+  #else
+    #set($mode = "view")
+  #end
+#end
+#if(!$curdoc)
+  #set($curdoc = $doc)
+#end
+$xwiki.jsx.use("RegistrationCodes.Code.RegistrationCodeSheet")
+$xwiki.ssx.use("RegistrationCodes.Code.RegistrationCodeSheet")
+#set($xobject = $curdoc.getObject('RegistrationCodes.Code.RegistrationCodeClass'))
+#### begin display macros
+### this macro shows a validation error message if it exists
+#macro(showvalidationmessage $message)
+  #if($xcontext.validationStatus.errors.contains($message))
+    {{error}}$services.localization.render($message){{/error}}
+  #end
+#end ## end showvalidationmessage
+### this macros displays a field and it's tooltip
+#macro(showfield $fieldname $mode)
+  #if( $mode == "edit")
+    (% fieldname="$fieldname" %) (((
+      &lt;label for="Bibliography.Code.PersonClass_0_$fieldname"
+        data-toggle='tooltip' 
+        title='$services.localization.render("registrationcodes.tooltip_$fieldname")'&gt;
+          $services.localization.render("registrationcodes.label_$fieldname")
+          &lt;span class="tooltip-mark"&gt;$services.icon.render('question','Silk')&lt;/span&gt; :
+      &lt;/label&gt;
+      $curdoc.display($fieldname, $mode)
+     #showvalidationmessage("registrationcodes.val_$fieldname")
+    )))
+  #else
+    #set($value = $xobject.getProperty($fieldname).value)
+    ##if ($stringtool.isNotBlank($value.trim()))
+      (% fieldname="$fieldname" %) (((
+        &lt;span data-toggle='tooltip' 
+          title='$services.localization.render("registrationcodes.tooltip_$fieldname")'&gt; 
+          $services.localization.render("registrationcodes.label_$fieldname")
+          &lt;span class="tooltip-mark"&gt;$services.icon.render('question','Silk')&lt;/span&gt;
+        &lt;/span&gt; : $curdoc.display($fieldname, $mode)
+      )))
+    ##end
+  #end
+#end ## end showfield macro
+##### end macros
+$curdoc.use("RegistrationCodes.Code.RegistrationCodeClass")
+(((
+
+#showfield("code", 'view')
+#showfield("active", $mode)
+#showfield("description", $mode)
+#showfield("startDate", $mode)
+#showfield("endDate", $mode)
+#showfield("maxUse", $mode)
+#showfield("addToGroups", $mode)
+
+#if($mode != "edit")
+#showfield("lastUsed", 'view')
+#showfield("users", 'view')
+#end
+
+)))
+
+## Invoke validation
+&lt;input type="hidden" name="xvalidate" value="1" /&gt;
+## csrf
+&lt;input type="hidden" name="form_token" value="$!{services.csrf.getToken()}" /&gt;
+{{/html}}
+{{/velocity}}</content>
+</xwikidoc>

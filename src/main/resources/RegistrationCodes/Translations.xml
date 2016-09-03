@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xwikidoc reference="RegistrationCodes.Translations" locale="">
+  <web>RegistrationCodes</web>
+  <name>Translations</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <parent>RegistrationCode.WebHome</parent>
+  <creator>xwiki:XWiki.Admin</creator>
+  <author>xwiki:XWiki.Admin</author>
+  <customClass/>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <creationDate>1472831253000</creationDate>
+  <date>1472891036000</date>
+  <contentUpdateDate>1472891036000</contentUpdateDate>
+  <version>1.1</version>
+  <title/>
+  <defaultTemplate/>
+  <validationScript/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>true</hidden>
+  <object>
+    <class>
+      <name>XWiki.TranslationDocumentClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <scope>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>scope</name>
+        <number>1</number>
+        <prettyName>Scope</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators>|, </separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>GLOBAL|WIKI|USER|ON_DEMAND</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </scope>
+    </class>
+    <name>RegistrationCodes.Translations</name>
+    <number>0</number>
+    <className>XWiki.TranslationDocumentClass</className>
+    <guid>ca46a7b8-e895-4911-9d18-9098a55b800b</guid>
+    <property>
+      <scope>WIKI</scope>
+    </property>
+  </object>
+  <content>registrationcodes.applicationsPanelEntryLabel=Registration codes
+
+registrationcodes.create.need=You need first to {0} log in {1} or {2} register {3}
+registrationcodes.create.submit=Create
+
+registrationcodes.label_active=Active
+registrationcodes.label_description=Description
+registrationcodes.label_startDate=Start date
+registrationcodes.label_endDate=End date
+registrationcodes.label_addToGroups=Add to the groups
+registrationcodes.label__actions=Actions
+registrationcodes.label_users=Users
+registrationcodes.label_lastUsed=Last used
+registrationcodes.label_maxUse=Max use
+registrationcodes.label_code=Code
+registrationcodes.label_emptyvalue=
+
+
+registrationcodes.create.title=Create a registration code
+registrationcodes.view.title=Registration code
+registrationcodes.list.title=List of registration codes
+registrationcodes.register.title=Register a code
+registrationcodes.space.title=Registration codes
+
+registrationcodes.register.done=Code applied with success
+registrationcodes.register.error=Invalid code
+registrationcodes.register.submit=Submit</content>
+</xwikidoc>

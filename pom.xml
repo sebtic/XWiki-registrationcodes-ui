@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.projectsforge.xwiki</groupId>
+	<artifactId>registrationcodes-ui</artifactId>
+	<version>1.0.4</version>
+	<name>XWiki Registration codes UI</name>
+	<description>XWiki Registration codes UI</description>
+	<packaging>xar</packaging>
+
+	<organization>
+		<name>Projectsforge.org</name>
+		<url>https://gitlab.projectsforge.org</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<id>sebtic@projectsforge.org</id>
+			<name>Sébastien Aupetit</name>
+			<email>sebtic@projectsforge.org</email>
+		</developer>
+	</developers>
+
+	<scm>
+		<url>https://gitlab.projectsforge.org/XWiki/registrationcodes-ui</url>
+		<connection>scm:git:https://gitlab.projectsforge.org/XWiki/registrationcodes-ui.git</connection>
+		<developerConnection>scm:git:ssh://git@gitlab.projectsforge.org:2222/XWiki/registrationcodes-ui.git</developerConnection>
+	</scm>
+	<ciManagement>
+		<system>gitlab-ci</system>
+		<url>https://gitlab.projectsforge.org/XWiki/registrationcodes-ui</url>
+	</ciManagement>
+	<issueManagement>
+		<system>gitlab</system>
+		<url>https://gitlab.projectsforge.org/XWiki/registrationcodes-ui/issues</url>
+	</issueManagement>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<commons.version>8.1</commons.version>
+		<rendering.version>8.1</rendering.version>
+		<platform.version>8.1</platform.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.xwiki.commons</groupId>
+				<artifactId>xwiki-commons-tool-xar-plugin</artifactId>
+				<version>${commons.version}</version>
+				<configuration>
+					<!-- hide all pages -->
+					<technicalPages>
+						<technicalPage>.*\.xml</technicalPage>
+					</technicalPages>
+				</configuration>
+				<executions>
+					<execution>
+						<id>format-xar</id>
+						<goals>
+							<goal>format</goal>
+						</goals>
+						<phase>process-resources</phase>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<extensions>
+			<extension>
+				<groupId>org.xwiki.commons</groupId>
+				<artifactId>xwiki-commons-tool-xar-handlers</artifactId>
+				<version>${commons.version}</version>
+			</extension>
+		</extensions>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.xwiki.commons
+										</groupId>
+										<artifactId>
+											xwiki-commons-tool-xar-plugin
+										</artifactId>
+										<versionRange>
+											[8.1,)
+										</versionRange>
+										<goals>
+											<goal>format</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<dependencies>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>xwiki-snapshots</id>
+			<name>XWiki Nexus Snapshot Repository Proxy</name>
+			<url>http://nexus.xwiki.org/nexus/content/groups/public-snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>xwiki-releases</id>
+			<name>XWiki Nexus Releases Repository Proxy</name>
+			<url>http://nexus.xwiki.org/nexus/content/groups/public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>projectsforge-public-releases</id>
+			<url>https://nexus.projectsforge.org/repository/projectsforge-public-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>projectsforge-public-snapshots</id>
+			<url>https://nexus.projectsforge.org/repository/projectsforge-public-snapshots//</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>

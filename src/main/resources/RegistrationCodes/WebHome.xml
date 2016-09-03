@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xwikidoc reference="RegistrationCodes.WebHome" locale="">
+  <web>RegistrationCodes</web>
+  <name>WebHome</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <parent>Main.WebHome</parent>
+  <creator>xwiki:XWiki.Admin</creator>
+  <author>xwiki:XWiki.Admin</author>
+  <customClass/>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <creationDate>1472828522000</creationDate>
+  <date>1472891003000</date>
+  <contentUpdateDate>1472891003000</contentUpdateDate>
+  <version>1.1</version>
+  <title>RegistrationCodes</title>
+  <defaultTemplate/>
+  <validationScript/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>true</hidden>
+  <content>{{velocity}}
+#set($docextras=[])
+#if( $services.security.authorization.hasAccess('view', 'RegistrationCodes.Code.CreateRegistrationCode'))
+  This application allows to manage registration codes.
+  * [[Add a registration code&gt;&gt;doc:RegistrationCodes.Code.CreateRegistrationCode]]
+  * [[List registration codes&gt;&gt;doc:RegistrationCodes.Data.WebHome]]
+  * [[Register a code&gt;&gt;doc:RegistrationCodes.Code.RegistrationCodeForm]]
+#else
+  #set($formRef = $services.model.createDocumentReference('', ['RegistrationCodes', 'Code'], 'RegistrationCodeForm'))
+  #set($formDoc = $xwiki.getDocument($formRef))
+  $response.sendRedirect($formDoc.getURL('view'))
+#end
+{{/velocity}}</content>
+</xwikidoc>
