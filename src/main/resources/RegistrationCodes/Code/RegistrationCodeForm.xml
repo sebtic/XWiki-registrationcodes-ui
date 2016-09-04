@@ -195,7 +195,7 @@
     #if( $result == "success")
       {{success}}$services.localization.render('registrationcodes.register.result.success'){{/success}}
     #else
-      #set($msgKey = 'registrationcodes.register.result.'+$result)
+      #set($msgKey = 'registrationcodes.register.result.' + $result)
       {{error}}$services.localization.render($msgKey){{/error}}
     #end
   #else

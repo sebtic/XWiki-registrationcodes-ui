@@ -150,7 +150,7 @@
   <content>{{velocity}}
  
 #set($docextras=[])
-#set($columns = ["active", "description", "code", "maxUse", "startDate", "endDate", "lastUsed", "addToGroups", "users"])
+#set($columns = ["active", "description", "code", "maxUse", "startDate", "endDate", "lastUsed", "addToWikis", "addToGroups", "users"])
 #set($columnsProperties = {
   "active" : { "filterable" : true, "type" : "boolean", "sortable" : true, "html":false},
   "description" : { "filterable" : true, "type" : "text", "sortable" : true, "html":false},
@@ -159,8 +159,9 @@
   "startDate" : { "filterable" : true, "type" : "date", "sortable" : true , "html":false},
   "endDate" : { "filterable" : true, "type" : "date", "sortable" : true , "html":false},
   "lastUsed" : { "filterable" : true, "type" : "date", "sortable" : true, "html":false},
-  "addToGroups" : { "filterable" : true, "type" : "multilist", "sortable" : true , "html":true},
-  "users" : { "filterable" : true, "type" : "multilist", "sortable" : true, "html":true}
+  "addToWikis" : { "filterable" : true, "type" : "multilist", "sortable" : true , "html":true},
+  "addToGroups" : { "filterable" : true, "type" : "text", "sortable" : true , "html":true},
+  "users" : { "filterable" : true, "type" : "text", "sortable" : true, "html":true}
 })
 #set($options = { 
    "className":"RegistrationCodes.Code.RegistrationCodeClass",
