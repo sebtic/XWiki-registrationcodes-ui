@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<xwikidoc version="1.2" reference="RegistrationCodes.Code.RegistrationCodeClass" locale="">
+<xwikidoc reference="RegistrationCodes.Code.RegistrationCodeClass" locale="">
   <web>RegistrationCodes.Code</web>
   <name>RegistrationCodeClass</name>
   <language/>
   <defaultLanguage/>
   <translation>0</translation>
-  <creator>xwiki:XWiki.Admin</creator>
-  <creationDate>1472828757000</creationDate>
   <parent>RegistrationCodes.Code.WebHome</parent>
+  <creator>xwiki:XWiki.Admin</creator>
   <author>xwiki:XWiki.Admin</author>
+  <customClass/>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <date>1472926561000</date>
-  <contentUpdateDate>1472828757000</contentUpdateDate>
+  <creationDate>1472828757000</creationDate>
+  <date>1472977505000</date>
+  <contentUpdateDate>1472915140000</contentUpdateDate>
   <version>1.1</version>
   <title>RegistrationCodeClass</title>
+  <defaultTemplate/>
+  <validationScript/>
   <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content/>
   <class>
     <name>RegistrationCodes.Code.RegistrationCodeClass</name>
     <customClass/>
@@ -48,7 +50,7 @@
       <classname/>
       <customDisplay/>
       <disabled>0</disabled>
-      <displayType>select</displayType>
+      <displayType>input</displayType>
       <idField/>
       <multiSelect>1</multiSelect>
       <name>addToGroups</name>
@@ -58,9 +60,9 @@
       <relationalStorage>0</relationalStorage>
       <separator/>
       <separators/>
-      <size>1</size>
+      <size>80</size>
       <sort>value</sort>
-      <sql>select distinct doc.fullName, doc.name from XWikiDocument doc, BaseObject obj WHERE obj.className = 'XWiki.XWikiGroups' AND obj.name = doc.fullName AND obj.name &lt;&gt; 'XWiki.XWikiGroupTemplate'</sql>
+      <sql/>
       <unmodifiable>0</unmodifiable>
       <validationMessage/>
       <validationRegExp/>
@@ -201,10 +203,6 @@
     </users>
   </class>
   <object>
-    <name>RegistrationCodes.Code.RegistrationCodeClass</name>
-    <number>0</number>
-    <className>XWiki.ClassSheetBinding</className>
-    <guid>5b3cbc70-892b-4fbb-8297-dbac2141a543</guid>
     <class>
       <name>XWiki.ClassSheetBinding</name>
       <customClass/>
@@ -228,15 +226,15 @@
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </sheet>
     </class>
+    <name>RegistrationCodes.Code.RegistrationCodeClass</name>
+    <number>0</number>
+    <className>XWiki.ClassSheetBinding</className>
+    <guid>5b3cbc70-892b-4fbb-8297-dbac2141a543</guid>
     <property>
       <sheet>RegistrationCodeSheet</sheet>
     </property>
   </object>
   <object>
-    <name>RegistrationCodes.Code.RegistrationCodeClass</name>
-    <number>0</number>
-    <className>XWiki.DocumentSheetBinding</className>
-    <guid>89991bbb-cb21-467f-a68e-6cdff6da459d</guid>
     <class>
       <name>XWiki.DocumentSheetBinding</name>
       <customClass/>
@@ -260,8 +258,13 @@
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </sheet>
     </class>
+    <name>RegistrationCodes.Code.RegistrationCodeClass</name>
+    <number>0</number>
+    <className>XWiki.DocumentSheetBinding</className>
+    <guid>89991bbb-cb21-467f-a68e-6cdff6da459d</guid>
     <property>
       <sheet>XWiki.ClassSheet</sheet>
     </property>
   </object>
+  <content/>
 </xwikidoc>

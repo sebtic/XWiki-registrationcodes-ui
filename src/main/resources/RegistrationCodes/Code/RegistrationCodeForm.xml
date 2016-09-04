@@ -12,8 +12,8 @@
   <customClass/>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <creationDate>1472843878000</creationDate>
-  <date>1472884484000</date>
-  <contentUpdateDate>1472881170000</contentUpdateDate>
+  <date>1472974529000</date>
+  <contentUpdateDate>1472974529000</contentUpdateDate>
   <version>1.1</version>
   <title>$services.localization.render('registrationcodes.register.title')</title>
   <defaultTemplate/>
@@ -183,8 +183,8 @@
     </property>
   </object>
   <content>{{velocity}}
-#set($docextras=[])
 {{html wiki=true}}
+#set($docextras=[])
 #if ($isGuest)
   #set($login = ${$doc.getURL("login", "xredirect=$doc.externalURL")})
   #set($register = ${$xwiki.getURL($services.model.resolveDocument('', 'default'), "register", "xredirect=$doc.externalURL")})
@@ -196,7 +196,7 @@
       {{info}}$services.localization.render('registrationcodes.register.result.success'){{/info}}
     #else
       #set($msgKey = 'registrationcodes.register.result.'+$result)
-    {{error}}$services.localization.render($msgKey){{/error}}
+      {{error}}$services.localization.render($msgKey){{/error}}
     #end
   #else
     &lt;form method="post" action="$doc.getURL()"&gt;

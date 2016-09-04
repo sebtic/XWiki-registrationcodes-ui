@@ -12,8 +12,8 @@
   <customClass/>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <creationDate>1472829679000</creationDate>
-  <date>1472885179000</date>
-  <contentUpdateDate>1472885179000</contentUpdateDate>
+  <date>1472977576000</date>
+  <contentUpdateDate>1472974529000</contentUpdateDate>
   <version>1.1</version>
   <title>$services.localization.render('registrationcodes.view.title')</title>
   <defaultTemplate/>
@@ -211,7 +211,7 @@
     </property>
     <property>
       <code>require(['jquery', "$services.webjars.url('jquery-ui', 'jquery-ui.js')", "$services.webjars.url('select2', 'dist/js/select2.min.js')" ], function ($) {
-  $('div[fieldname] select').select2();
+  $('#RegistrationCodes\\.Code\\.RegistrationCodeClass_0_addToWikis').select2();
 });
 </code>
     </property>
