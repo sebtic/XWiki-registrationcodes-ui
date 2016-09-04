@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.projectsforge.xwiki</groupId>
 	<artifactId>registrationcodes-ui</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<name>XWiki Registration codes UI</name>
 	<description>XWiki Registration codes UI</description>
 	<packaging>xar</packaging>
