@@ -71,8 +71,20 @@ registrationcodes.label__actions=Actions
 registrationcodes.label_users=Users
 registrationcodes.label_lastUsed=Last used
 registrationcodes.label_maxUse=Max use
-registrationcodes.label_code=Code
+registrationcodes.label_code=Registration code
 registrationcodes.label_emptyvalue=
+
+registrationcodes.tooltip_active=It must be checked to allow usage of the code.
+registrationcodes.tooltip_description=The description of the code.
+registrationcodes.tooltip_startDate=The code is refused before this date.
+registrationcodes.tooltip_endDate=The code is refused after this date.
+registrationcodes.tooltip_addToGroups=If not empty, the user will be added on the groups on the specified wikis.
+registrationcodes.tooltip__actions=Actions
+registrationcodes.tooltip_users=The users who registered this code.
+registrationcodes.tooltip_lastUsed=The date this code was last used on.
+registrationcodes.tooltip_maxUse=The code can not be used by more than the specified number of users.
+registrationcodes.tooltip_code=The registration code.
+
 
 
 registrationcodes.create.title=Create a registration code
@@ -81,7 +93,10 @@ registrationcodes.list.title=List of registration codes
 registrationcodes.register.title=Register a code
 registrationcodes.space.title=Registration codes
 
-registrationcodes.register.done=Code applied with success
-registrationcodes.register.error=Invalid code
-registrationcodes.register.submit=Submit</content>
+registrationcodes.register.result.success=Code applied with success
+registrationcodes.register.result.noresult=Invalid code
+registrationcodes.register.result.multipleresults=Ambiguous code. Contact the administrator.
+registrationcodes.register.result.error=An error occurred. Contact the administrator.
+registrationcodes.register.submit=Submit
+</content>
 </xwikidoc>

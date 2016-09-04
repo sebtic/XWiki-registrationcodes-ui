@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<xwikidoc reference="RegistrationCodes.Code.RegistrationCodeClass" locale="">
+<xwikidoc version="1.2" reference="RegistrationCodes.Code.RegistrationCodeClass" locale="">
   <web>RegistrationCodes.Code</web>
   <name>RegistrationCodeClass</name>
   <language/>
   <defaultLanguage/>
   <translation>0</translation>
-  <parent>RegistrationCodes.Code.WebHome</parent>
-  <creator>xwiki:XWiki.Admin</creator>
-  <author>xwiki:XWiki.Admin</author>
-  <customClass/>
-  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <creator>XWiki.admin</creator>
   <creationDate>1472828757000</creationDate>
-  <date>1472890353000</date>
+  <parent>RegistrationCodes.Code.WebHome</parent>
+  <author>XWiki.admin</author>
+  <contentAuthor>XWiki.admin</contentAuthor>
+  <date>1472926561000</date>
   <contentUpdateDate>1472828757000</contentUpdateDate>
-  <version>1.1</version>
+  <version>1.12</version>
   <title>RegistrationCodeClass</title>
-  <defaultTemplate/>
-  <validationScript/>
-  <comment/>
-  <minorEdit>false</minorEdit>
+  <comment>Mise à jour de propriété de classe</comment>
+  <minorEdit>true</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
+  <content/>
   <class>
     <name>RegistrationCodes.Code.RegistrationCodeClass</name>
     <customClass/>
@@ -69,6 +66,30 @@
       <valueField/>
       <classType>com.xpn.xwiki.objects.classes.PageClass</classType>
     </addToGroups>
+    <addToWikis>
+      <cache>0</cache>
+      <classname>XWiki.XWikiServerClass</classname>
+      <customDisplay/>
+      <disabled>0</disabled>
+      <displayType>select</displayType>
+      <idField>server</idField>
+      <multiSelect>1</multiSelect>
+      <name>addToWikis</name>
+      <number>10</number>
+      <picker>0</picker>
+      <prettyName>addToWikis</prettyName>
+      <relationalStorage>0</relationalStorage>
+      <separator> </separator>
+      <separators/>
+      <size>1</size>
+      <sort>value</sort>
+      <sql/>
+      <unmodifiable>0</unmodifiable>
+      <validationMessage/>
+      <validationRegExp/>
+      <valueField>wikiprettyname</valueField>
+      <classType>com.xpn.xwiki.objects.classes.PageClass</classType>
+    </addToWikis>
     <code>
       <customDisplay/>
       <disabled>0</disabled>
@@ -179,6 +200,10 @@
     </users>
   </class>
   <object>
+    <name>RegistrationCodes.Code.RegistrationCodeClass</name>
+    <number>0</number>
+    <className>XWiki.ClassSheetBinding</className>
+    <guid>5b3cbc70-892b-4fbb-8297-dbac2141a543</guid>
     <class>
       <name>XWiki.ClassSheetBinding</name>
       <customClass/>
@@ -202,15 +227,15 @@
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </sheet>
     </class>
-    <name>RegistrationCodes.Code.RegistrationCodeClass</name>
-    <number>0</number>
-    <className>XWiki.ClassSheetBinding</className>
-    <guid>5b3cbc70-892b-4fbb-8297-dbac2141a543</guid>
     <property>
       <sheet>RegistrationCodeSheet</sheet>
     </property>
   </object>
   <object>
+    <name>RegistrationCodes.Code.RegistrationCodeClass</name>
+    <number>0</number>
+    <className>XWiki.DocumentSheetBinding</className>
+    <guid>89991bbb-cb21-467f-a68e-6cdff6da459d</guid>
     <class>
       <name>XWiki.DocumentSheetBinding</name>
       <customClass/>
@@ -234,13 +259,8 @@
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </sheet>
     </class>
-    <name>RegistrationCodes.Code.RegistrationCodeClass</name>
-    <number>0</number>
-    <className>XWiki.DocumentSheetBinding</className>
-    <guid>89991bbb-cb21-467f-a68e-6cdff6da459d</guid>
     <property>
       <sheet>XWiki.ClassSheet</sheet>
     </property>
   </object>
-  <content/>
 </xwikidoc>

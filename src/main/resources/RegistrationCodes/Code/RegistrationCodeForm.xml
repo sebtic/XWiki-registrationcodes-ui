@@ -191,10 +191,12 @@
   $services.localization.render('registrationcodes.register.need', [$login,$register])
 #else
   #if($stringtool.isNotBlank($request.registrationcode_code))
-    #if($services.registrationcodes.activateRegitrationCode($request.registrationcode_code, $xcontext.user))
-      (% class="info" %) ((($services.localization.render('registrationcodes.register.done'))))
+    #set( $result = $services.registrationcodes.activateRegitrationCode($request.registrationcode_code, $xcontext.user))
+    #if( $result == "success")
+      {{info}}$services.localization.render('registrationcodes.register.result.success'){{/info}}
     #else
-      (% class="error" %) ((($services.localization.render('registrationcodes.register.error'))))
+      #set($msgKey = 'registrationcodes.register.result.'+$result)
+    {{error}}$services.localization.render($msgKey){{/error}}
     #end
   #else
     &lt;form method="post" action="$doc.getURL()"&gt;

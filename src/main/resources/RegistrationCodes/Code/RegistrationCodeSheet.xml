@@ -402,6 +402,7 @@ $curdoc.use("RegistrationCodes.Code.RegistrationCodeClass")
 #showfield("startDate", $mode)
 #showfield("endDate", $mode)
 #showfield("maxUse", $mode)
+#showfield("addToWikis", $mode)
 #showfield("addToGroups", $mode)
 
 #if($mode != "edit")
