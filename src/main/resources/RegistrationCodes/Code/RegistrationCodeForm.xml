@@ -200,14 +200,12 @@
     #end
   #else
     &lt;form method="post" action="$doc.getURL()"&gt;
-      (% fieldname="code" %) (((
       &lt;label for="registrationcode_code" data-toggle='tooltip' 
         title='$services.localization.render("registrationcodes.tooltip_code")'&gt;
           $services.localization.render("registrationcodes.label_code")
           &lt;span class="tooltip-mark"&gt;$services.icon.render('question','Silk')&lt;/span&gt; :
       &lt;/label&gt;
       &lt;input name="registrationcode_code" /&gt;
-      )))
       &lt;input type="submit" value="$services.localization.render('registrationcodes.register.submit')" /&gt;
     &lt;/form&gt;
   #end
